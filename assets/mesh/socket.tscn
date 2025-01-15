@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnruxywfslytg"]
+
+[ext_resource type="PackedScene" uid="uid://dqorfj2xwk1ac" path="res://assets/mesh/socket.blend" id="1_uhcgo"]
+
+[node name="socket" instance=ExtResource("1_uhcgo")]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="stdplug" parent="." index="1"]
+visible = false
+
+[node name="stdplug_001" parent="." index="2"]
+visible = false
+
+[node name="stdplug_002" parent="." index="3"]
+visible = false
+
+[node name="stdplug_003" parent="." index="4"]
+visible = false
+
+[node name="stdplug_004" parent="." index="5"]
+visible = false

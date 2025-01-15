@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalOptionServer="*res://scenes/globalOptionServer/globalOptionServer.tscn"
-Fullscreen="*res://addons/easy_fullscreen/autoload.gd"
 
 [display]
 
@@ -26,14 +25,9 @@ window/size/viewport_width=1600
 window/size/viewport_height=900
 window/stretch/mode="canvas_items"
 
-[easy_fullscreen]
-
-enabled=true
-action="fullscreen"
-
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/easy_fullscreen/plugin.cfg", "res://addons/script-ide/plugin.cfg")
+enabled=PackedStringArray("res://addons/script-ide/plugin.cfg")
 
 [gui]
 

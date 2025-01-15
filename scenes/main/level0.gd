@@ -54,8 +54,6 @@ func _process(delta: float) -> void:
 		deltaT -= CHUNK_UPDATE_SECOND_INTERVAL
 		
 		var playerChunkPos:Vector2 = Vector2(floor(player.position.x/32),floor(player.position.z/32))
-		print(player.position)
-		print(playerChunkPos)
 		for cx in range(-CHUNK_HOLD_RANGE,CHUNK_HOLD_RANGE):
 			for cy in range(-CHUNK_HOLD_RANGE,CHUNK_HOLD_RANGE):
 				var chunkPosToCheck:Vector2 = Vector2(playerChunkPos.x+cx,playerChunkPos.y+cy)

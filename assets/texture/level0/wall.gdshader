@@ -15,7 +15,7 @@ void vertex() {
 
 void fragment() {
 	vec2 customUV = vec2(MCoord.x+MCoord.z,-MCoord.y);
-	ALBEDO = mix(texture(wallPaperTex,customUV * TEX_UV_SCALE),filthColor,texture(noiseTex,customUV * NOISE_UV_SCALE).r * filthColor.a).rgb;	
+	ALBEDO = mix(texture(wallPaperTex,customUV * TEX_UV_SCALE),filthColor,texture(noiseTex,customUV * NOISE_UV_SCALE).r * filthColor.a).rgb;
 }
 
 //void light() {
