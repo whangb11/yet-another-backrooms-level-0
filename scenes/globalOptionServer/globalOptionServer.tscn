@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cypd8sc1hfeeq"]
+
+[ext_resource type="Script" path="res://scenes/globalOptionServer/global_option_server.gd" id="1_3auey"]
+
+[node name="GlobalOptionServer" type="Node"]
+script = ExtResource("1_3auey")

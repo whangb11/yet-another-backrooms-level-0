@@ -1,0 +1,117 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpcbp6o2tdee2"]
+
+[ext_resource type="Script" path="res://scenes/main/level0.gd" id="1_0sho7"]
+[ext_resource type="PackedScene" uid="uid://cx8oxjwo1dp6b" path="res://scenes/player/player.tscn" id="2_cnqkr"]
+[ext_resource type="Theme" uid="uid://cqrl6dkgcq61w" path="res://assets/mainTheme.tres" id="4_n02ph"]
+[ext_resource type="Script" path="res://scenes/main/pause_menu.gd" id="5_3vbu4"]
+[ext_resource type="PackedScene" uid="uid://bhbom3xkr55o4" path="res://scenes/settingsScreenScene/settingsScreen.tscn" id="6_saiv8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_83xn8"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ktwsc"]
+sky_material = SubResource("ProceduralSkyMaterial_83xn8")
+
+[sub_resource type="Environment" id="Environment_cj584"]
+sky = SubResource("Sky_ktwsc")
+ambient_light_source = 2
+ambient_light_color = Color(0.426922, 0.414114, 0.297611, 1)
+reflected_light_source = 1
+tonemap_mode = 2
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_read_sky_light = false
+sdfgi_bounce_feedback = 0.75
+sdfgi_cascades = 6
+sdfgi_min_cell_size = 0.05
+sdfgi_cascade0_distance = 3.2
+sdfgi_energy = 2.0
+glow_enabled = true
+glow_normalized = true
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_0sho7")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cj584")
+
+[node name="player" parent="." instance=ExtResource("2_cnqkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="ChunkContainer" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 16)
+
+[node name="PauseMenu" type="Control" parent="."]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_n02ph")
+script = ExtResource("5_3vbu4")
+
+[node name="Bg" type="ColorRect" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.313726)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/Bg"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -105.5
+offset_right = 105.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="btnResume" type="Button" parent="PauseMenu/Bg/VBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+text = "PAUSEMENU_RESUME"
+
+[node name="LangSettings" type="OptionButton" parent="PauseMenu/Bg/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+selected = 0
+item_count = 4
+popup/item_0/text = "LOCALE_NAME"
+popup/item_0/separator = true
+popup/item_1/text = "简体中文"
+popup/item_1/id = 1
+popup/item_2/text = "English"
+popup/item_2/id = 2
+popup/item_3/text = "Moglish"
+popup/item_3/id = 3
+
+[node name="btnConfig" type="Button" parent="PauseMenu/Bg/VBoxContainer"]
+layout_mode = 2
+text = "PAUSEMENU_OPTIONS"
+
+[node name="btnExit" type="Button" parent="PauseMenu/Bg/VBoxContainer"]
+layout_mode = 2
+text = "PAUSEMENU_QUIT"
+
+[node name="SettingsScreen" parent="PauseMenu" node_paths=PackedStringArray("environment") instance=ExtResource("6_saiv8")]
+visible = false
+layout_mode = 1
+environment = NodePath("../../WorldEnvironment")
+
+[node name="GridMap" type="GridMap" parent="."]
+
+[connection signal="visibility_changed" from="PauseMenu" to="PauseMenu" method="_on_visibility_changed"]
+[connection signal="gui_input" from="PauseMenu/Bg" to="PauseMenu" method="_on_bg_gui_input"]
+[connection signal="pressed" from="PauseMenu/Bg/VBoxContainer/btnResume" to="PauseMenu" method="_on_btn_resume_pressed"]
+[connection signal="item_selected" from="PauseMenu/Bg/VBoxContainer/LangSettings" to="PauseMenu" method="_on_lang_settings_item_selected"]
+[connection signal="pressed" from="PauseMenu/Bg/VBoxContainer/btnConfig" to="PauseMenu" method="_on_btn_config_pressed"]
+[connection signal="pressed" from="PauseMenu/Bg/VBoxContainer/btnExit" to="PauseMenu" method="_on_btn_exit_pressed"]

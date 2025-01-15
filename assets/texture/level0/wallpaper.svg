@@ -1,0 +1,47 @@
+<!--
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+Version 2, December 2004 
+
+Copyright (C) 2025 u5df2u901d <BaiduTieba@u5df2u901d> 
+
+Everyone is permitted to copy and distribute verbatim or modified 
+copies of this script, and changing it is allowed as long 
+as the name is changed. 
+
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
+
+0. You just DO WHAT THE FUCK YOU WANT TO.
+-->
+
+<svg wdith="256" height="256" xmlns="http://www.w3.org/2000/svg">
+<!-- background --><rect width="256" height="256" fill="#999953"/>
+	<ellipse cx="14" cy="-50" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="-50" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="14" cy="-18" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="-18" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="14" cy="14" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="14" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="14" cy="46" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="46" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="14" cy="78" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="78" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="14" cy="110" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="110" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="14" cy="142" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="142" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="14" cy="174" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="174" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="14" cy="206" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="206" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="14" cy="238" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="238" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="14" cy="270" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="14" cy="270" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="-50" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="-50" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="-18" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="-18" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="14" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="14" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="46" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="46" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="78" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="78" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="110" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="110" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="142" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="142" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="174" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="174" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="206" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="206" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="238" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="238" rx="6" ry="15" fill="#7a7740"/>
+	<ellipse cx="142" cy="270" rx="12" ry="24" stroke="#7a7740" stroke-width="4" fill="#999967"/><ellipse cx="142" cy="270" rx="6" ry="15" fill="#7a7740"/>
+ <polygon points="32,30,78,0,124,30,124,50,78,20,32,50" fill="#7a7740"/>
+ <polygon points="32,55,78,25,124,55,124,75,78,45,32,75" fill="#7a7740"/>
+ <polygon points="32,119,78,89,124,119,124,123,78,93,32,123" fill="#7a7740"/>
+ <polygon points="160,158,206,128,252,158,252,178,206,148,160,178" fill="#7a7740"/>
+ <polygon points="160,183,206,153,252,183,252,203,206,173,160,203" fill="#7a7740"/>
+ <polygon points="160,247,206,217,252,247,252,251,206,221,160,251" fill="#7a7740"/>
+</svg>

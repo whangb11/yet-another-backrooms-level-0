@@ -1,0 +1,19 @@
+index,cn,en,molanguage
+LOCALE_NAME,简体中文,English,Moglish
+PAUSEMENU_RESUME,继续游戏,Resume,ContinuePlay
+PAUSEMENU_QUIT,退出游戏,Quit,ExitGame
+PAUSEMENU_OPTIONS,设置,Options,GameSet
+OPTIONPAGE_TITLE,设置,Options,GameSet
+OPTIONPAGE_BUTTON_RESTART,重启,Restart,reDoGameStart
+OPTIONPAGE_BUTTON_CLOSE,关闭,Close,ExitGameSet
+OPTIONPAGE_HINT_NEED_RESTART_NOTIFIER,需要手动重启以应用设置,Manual restart is required to apply the changes.,Need hand move regamestart to use set.
+OPTIONPAGE_SEPERATOR_REGULAR,常规,Regular,Normal rule
+OPTIONPAGE_FULLSCREEN,全屏,Fullscreen,AllScreen
+OPTIONPAGE_SEPERATOR_GRAPHICS,图形,Graphics,Shape
+OPTIONPAGE_SSAO_HINT,屏幕空间环境光遮蔽，启用以使角落处更暗，与SDFGI一同启用时效果似乎不佳,"Screen Space Ambient Occlusion, enable to make corners darker. Seems to work poorly with SDFGI enabled together.","Environment light cover, let jiaoluo more black, look not gud use with SDFGI."
+OPTIONPAGE_SSIL_HINT,屏幕空间间接照明，启用SDFGI时推荐启用,"Screen Space Indirect Lighting, recommend to enable together with SDFGI.","Screen Space not direct ILlumination, advise use with use SDFGI"
+OPTIONPAGE_SDFGI_HINT,"启用或许能获得更加精致的全局光照效果，调校不佳，我的电脑带不动（悲","Enable for better global illumination. However it usually works poorly due to my POWERLESS pc. Just I cant optimize it properlly =( .","编不动了，再编下去我那点可怜的英语水平怕是要更烂"
+OPTIONPAGE_ADVANCED_LIGHTING,进阶光照,Advanced Lighting,go step light glow
+OPTIONPAGE_ADVANCED_LIGHTING_HINT,使额外光源可见，以获取更精致的光照效果，会带来严重的性能消耗（真的很严重）,"Make extra light sources visible for more decent lighting. This brings a REALLY REALLY HEAVY performance impact.","show more lamp, more beautiful light effect, low fps."
+OPTIONPAGE_ANTI_ALIASING,抗锯齿,Anti-aliashing,Resist saw tooth
+OPTIONPAGE_ANTI_ALIASING_DISABLED,禁用,Disabled,not use

@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://df817tgsgv1lw"]
+
+[ext_resource type="PackedScene" uid="uid://cmv7h20nv0fe" path="res://assets/mesh/cell.blend" id="1_me1rq"]
+[ext_resource type="Script" path="res://assets/mesh/cell.gd" id="2_5ldsy"]
+
+[node name="cell" instance=ExtResource("1_me1rq")]
+script = ExtResource("2_5ldsy")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Cube_002" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.468, 0)
+visible = false
+light_color = Color(0.855115, 0.858719, 0.615799, 1)
+light_energy = 0.396
+light_indirect_energy = 0.396
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 32.0
+omni_attenuation = 2.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Cube_002" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, -1.468, 0)
+visible = false
+light_color = Color(0.855115, 0.858719, 0.615799, 1)
+light_energy = 0.396
+light_indirect_energy = 0.396
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 32.0
+omni_attenuation = 2.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Cube_002" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, -1.468, -12.8)
+visible = false
+light_color = Color(0.855115, 0.858719, 0.615799, 1)
+light_energy = 0.396
+light_indirect_energy = 0.396
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 32.0
+omni_attenuation = 2.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Cube_002" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.468, -12.8)
+visible = false
+light_color = Color(0.855115, 0.858719, 0.615799, 1)
+light_energy = 0.396
+light_indirect_energy = 0.396
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 32.0
+omni_attenuation = 2.0

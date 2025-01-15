@@ -1,0 +1,138 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhbom3xkr55o4"]
+
+[ext_resource type="Theme" uid="uid://cqrl6dkgcq61w" path="res://assets/mainTheme.tres" id="1_aya6k"]
+[ext_resource type="Script" path="res://scenes/settingsScreenScene/settings_screen.gd" id="2_p40ox"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_7wxuj"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_pnvdr"]
+events = [SubResource("InputEventKey_7wxuj")]
+
+[node name="SettingsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_aya6k")
+script = ExtResource("2_p40ox")
+
+[node name="Panel" type="Panel" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_bottom = 30.0
+color = Color(0.184314, 0.184314, 0.2, 1)
+
+[node name="Label" type="Label" parent="Panel/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "OPTIONPAGE_TITLE"
+vertical_alignment = 1
+clip_text = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.3
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 40.0
+offset_bottom = -10.0
+
+[node name="SEP_Regular" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "OPTIONPAGE_SEPERATOR_REGULAR"
+
+[node name="fullscreenOption" type="CheckButton" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "OPTIONPAGE_FULLSCREEN"
+
+[node name="SEP_Graphics" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "OPTIONPAGE_SEPERATOR_GRAPHICS"
+
+[node name="ssaoOptionBtn" type="CheckButton" parent="Panel/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "OPTIONPAGE_SSAO_HINT"
+text = "SSAO"
+
+[node name="ssilOptionBtn" type="CheckButton" parent="Panel/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "OPTIONPAGE_SSIL_HINT"
+text = "SSIL"
+
+[node name="sdfgiOptionBtn" type="CheckButton" parent="Panel/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "OPTIONPAGE_SDFGI_HINT"
+text = "SDFGI"
+
+[node name="advancedLighting" type="CheckButton" parent="Panel/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "OPTIONPAGE_ADVANCED_LIGHTING_HINT"
+text = "OPTIONPAGE_ADVANCED_LIGHTING"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer"]
+layout_mode = 2
+selected = 0
+item_count = 6
+popup/item_0/text = "OPTIONPAGE_ANTI_ALIASING"
+popup/item_0/separator = true
+popup/item_1/text = "OPTIONPAGE_ANTI_ALIASING_DISABLED"
+popup/item_1/id = 1
+popup/item_2/text = "MSAA2x"
+popup/item_2/id = 2
+popup/item_3/text = "MSAA4x"
+popup/item_3/id = 3
+popup/item_4/text = "MSAA8x"
+popup/item_4/id = 4
+popup/item_5/text = "TAA"
+popup/item_5/id = 5
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 40.0
+offset_right = -10.0
+offset_bottom = -10.0
+alignment = 2
+
+[node name="needRestartHint" type="Label" parent="Panel/VBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "OPTIONPAGE_HINT_NEED_RESTART_NOTIFIER"
+autowrap_mode = 2
+
+[node name="btn_close" type="Button" parent="Panel/VBoxContainer2"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_pnvdr")
+text = "OPTIONPAGE_BUTTON_CLOSE"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="toggled" from="Panel/VBoxContainer/fullscreenOption" to="." method="_on_fullscreen_option_toggled"]
+[connection signal="toggled" from="Panel/VBoxContainer/ssaoOptionBtn" to="." method="_on_ssao_option_btn_toggled"]
+[connection signal="toggled" from="Panel/VBoxContainer/ssilOptionBtn" to="." method="_on_ssil_option_btn_toggled"]
+[connection signal="toggled" from="Panel/VBoxContainer/sdfgiOptionBtn" to="." method="_on_sdfgi_option_btn_toggled"]
+[connection signal="toggled" from="Panel/VBoxContainer/advancedLighting" to="." method="_on_advanced_lighting_toggled"]
+[connection signal="item_selected" from="Panel/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="Panel/VBoxContainer2/btn_close" to="." method="_on_btn_close_pressed"]

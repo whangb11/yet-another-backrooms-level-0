@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwrgbv5h8tpn2"]
+
+[ext_resource type="PackedScene" uid="uid://3v30fi1ylrcy" path="res://assets/mesh/floor.blend" id="1_2pkaw"]
+[ext_resource type="Script" path="res://scenes/chunk/chunk.gd" id="1_pphkt"]
+[ext_resource type="PackedScene" uid="uid://df817tgsgv1lw" path="res://assets/mesh/cell.tscn" id="3_w7ttp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dauyj"]
+rough = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sksug"]
+size = Vector3(32, 2, 32)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4vfpe"]
+size = Vector3(256, 32, 256)
+
+[node name="Chunk" type="Node3D"]
+script = ExtResource("1_pphkt")
+
+[node name="floor" parent="." instance=ExtResource("1_2pkaw")]
+
+[node name="floorColli" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_dauyj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floorColli"]
+shape = SubResource("BoxShape3D_sksug")
+
+[node name="visibility" type="VisibleOnScreenNotifier3D" parent="."]
+aabb = AABB(-32, -1, -32, 64, 64, 64)
+
+[node name="walls" type="Node3D" parent="."]
+
+[node name="outOfBoundDetector" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="outOfBoundDetector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
+shape = SubResource("BoxShape3D_4vfpe")
+
+[node name="cell" type="Node3D" parent="."]
+
+[node name="cell" parent="cell" instance=ExtResource("3_w7ttp")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 8, 6, 8)
+
+[node name="cell2" parent="cell" instance=ExtResource("3_w7ttp")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 8, 6, -8)
+
+[node name="cell3" parent="cell" instance=ExtResource("3_w7ttp")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, -8, 6, -8)
+
+[node name="cell4" parent="cell" instance=ExtResource("3_w7ttp")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, -8, 6, 8)
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
+[connection signal="screen_entered" from="visibility" to="." method="_on_visibility_screen_entered"]
+[connection signal="screen_exited" from="visibility" to="." method="_on_visibility_screen_exited"]
+[connection signal="body_exited" from="outOfBoundDetector" to="." method="_on_out_of_bound_detector_body_exited"]

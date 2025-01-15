@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://drqf6kr7n048j"]
+
+[ext_resource type="Script" path="res://scenes/level0_wall/level_0_wall.gd" id="1_jodo1"]
+[ext_resource type="BoxMesh" uid="uid://c1wybjbl1lmx1" path="res://assets/mesh/level0_wall.tres" id="2_ul4n1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cqklb"]
+rough = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q755b"]
+resource_local_to_scene = true
+size = Vector3(1, 6, 1)
+
+[node name="Level0Wall" type="Node3D"]
+script = ExtResource("1_jodo1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+mesh = ExtResource("2_ul4n1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 5
+physics_material_override = SubResource("PhysicsMaterial_cqklb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+shape = SubResource("BoxShape3D_q755b")
