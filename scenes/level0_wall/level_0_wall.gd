@@ -27,6 +27,6 @@ func randomizel() -> void:
 	position.z=randi_range(POSITION_LIMIT.x,POSITION_LIMIT.y)
 	
 	#sometimes the wallplug floats, i surrender🙌
-	if randi_range(1,WALL_PLUG_SPAWN_CHANCE) == WALL_PLUG_SPAWN_CHANCE:
-		var side:int = randi_range(0,1) * 2 - 1
-		wallplug.position = Vector3((randi_range(0,1) * 2 - 1) * randf_range(0,length - 1) / 2,randf_range(WALL_PLUG_Y_LIMIT.x,WALL_PLUG_Y_LIMIT.y),side * 0.5)
+	#if randi_range(1,WALL_PLUG_SPAWN_CHANCE) == WALL_PLUG_SPAWN_CHANCE:
+	#	var side:int = randi_range(0,1) * 2 - 1
+	#	wallplug.position = Vector3((randi_range(0,1) * 2 - 1) * randf_range(0,length - 1) / 2,randf_range(WALL_PLUG_Y_LIMIT.x,WALL_PLUG_Y_LIMIT.y),side * 0.5)
