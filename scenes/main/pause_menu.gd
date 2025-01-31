@@ -3,7 +3,7 @@ extends Control
 const localeCode = [
 	"en","cn","en","molanguage"
 ]
-@onready var settingScreen:settingScreen = $SettingsScreen
+@onready var settingScreen:SettingScreen = $SettingsScreen
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(0,localeCode.size()):

@@ -1,4 +1,4 @@
-class_name settingScreen
+class_name SettingScreen
 extends Control
 var _isready:bool = false
 @export var environment:WorldEnvironment
